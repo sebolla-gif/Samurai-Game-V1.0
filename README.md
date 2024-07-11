@@ -27,7 +27,7 @@ Currently in development:
 
 ## Notes:
 
-All .bmp images used in the program are in the `resources` folder. Because of the way the program is set up you can simply change the matrix to use any .bmp image you want for the program. The matrix used has this format:
+All .bmp images used in the program are in the `resources` folder. In the way that the program is seted up you can simply change the matrix to use any .bmp image you want for the program. The matrix used has this format:
 
 The first three values ​​in each row are the right orientation, from where the images start to where they end and what row number they are in within the image. the other three values ​​are the same but for the reverse orientation
 
