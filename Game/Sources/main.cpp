@@ -3,7 +3,7 @@ Autor: Sebastian Vaccaro
 A�o: 2024
 Samurai Game V1.0
 Este programa crea un juego 2D en C++ usando Allegro.
-Permite manejar gr�ficos, personajes y disparos, con estados y movimientos definidos.
+Permite manejar gr�ficos y personajes, con estados y movimientos definidos.
 Renderiza im�genes BMP con transparencia, muestra el juego en pantalla completa y sincroniza verticalmente.
 */
 
