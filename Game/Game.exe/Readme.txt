@@ -1,0 +1,1 @@
+You must add all the contents of the resources folder to this folder for the executable to work
