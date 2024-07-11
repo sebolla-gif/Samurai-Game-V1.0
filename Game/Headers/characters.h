@@ -52,7 +52,7 @@ private:
     float speed;
     int damage;
     float vy; // Velocidad vertical
-    float ay; // Aceleración vertical
+    float ay; // Aceleraciï¿½n vertical
     CharacterState state;
 public:
     Character(const char*, int**,int, int,int,int,int,int);
@@ -79,11 +79,6 @@ public:
 
 };
 
-
 #endif // CHARACTERS_H_INCLUDED
 
-/*
-if (characterState.right && characterState.isReadyForAction()) {
-    // código
-}
-*/
+

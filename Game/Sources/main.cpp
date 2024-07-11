@@ -1,10 +1,10 @@
 /*
 Autor: Sebastian Vaccaro
-Año: 2024
+Aï¿½o: 2024
 Samurai Game V1.0
 Este programa crea un juego 2D en C++ usando Allegro.
-Permite manejar gráficos, personajes y disparos, con estados y movimientos definidos.
-Renderiza imágenes BMP con transparencia, muestra el juego en pantalla completa y sincroniza verticalmente.
+Permite manejar grï¿½ficos, personajes y disparos, con estados y movimientos definidos.
+Renderiza imï¿½genes BMP con transparencia, muestra el juego en pantalla completa y sincroniza verticalmente.
 */
 
 #include "start.h"
@@ -24,7 +24,7 @@ int main(void)
     // Crea el personaje del jugador
     Character player_1("player1.bmp", matrix_player_1, 0, VY - 128, 128, 128, 10, 10);
 
-    // Carga recursos y muestra el menú
+    // Carga recursos y muestra el menï¿½
     load_resources();
     menu();
 
@@ -36,9 +36,9 @@ int main(void)
     {
         int startTime = clock(); // Inicio del clock
 
-        // Muestra el mapa y actualiza la lógica del jugador
+        // Muestra el mapa y actualiza la lï¿½gica del jugador
         ShowMap();
-        player_1.play(); // Actualizar lógica del jugador
+        player_1.play(); // Actualizar lï¿½gica del jugador
         player_1.update(); // Aplicar gravedad
 
         // Actualiza la pantalla
@@ -61,34 +61,3 @@ int main(void)
 }
 
 END_OF_MAIN();
-
-
-
-/*
-
-        shot arrow("arrow.bmp", 250, (VY - (VY / 10)), 50, 11, 30);
-
-        // Verificar colisión entre el jugador y la flecha
-
-        if (player_1.checkCollision(arrow))
-        {
-            arrow.recycle(); // Reciclar la flecha si hay colisión
-            player_1.Hurt();
-        }
-
-
-        // Reutilizar flecha si no está activa
-        if (!arrow.isActive())
-        {
-            int numr = (std::rand() % (VY - 682)) + 680;
-            arrow.reuse(VX, numr);
-        }
-
-        // Mover y mostrar la flecha en pantalla
-        arrow.shot_on_screen();
-        arrow.Move();
-
-
-
-
-*/

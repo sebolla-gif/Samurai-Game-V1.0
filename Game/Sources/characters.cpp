@@ -344,7 +344,7 @@ bool Character::Protection()
         state.continuous = true;
         return true;
     }
-    return false;  // Asegúrate de devolver un valor por defecto si no se cumplen las condiciones anteriores
+    return false;  // Asegï¿½rate de devolver un valor por defecto si no se cumplen las condiciones anteriores
 }
 void Character::Jump()
 {
@@ -431,7 +431,7 @@ bool Character::Hurt()
         state.hurt = true;
         return true;
     }
-    return false;  // Asegúrate de devolver un valor por defecto si no se cumplen las condiciones anteriores
+    return false;  // Asegï¿½rate de devolver un valor por defecto si no se cumplen las condiciones anteriores
 }
 
 
@@ -455,29 +455,29 @@ bool Character::checkCollision(const T& other)
     int top2 = other.y;
     int bottom2 = other.y + other.height;
 
-    // Verificar si hay colisión
+    // Verificar si hay colisiï¿½n
     if (right1 >= left2 && left1 <= right2 && bottom1 >= top2 && top1 <= bottom2)
     {
-        // Hay colisión
+        // Hay colisiï¿½n
         return true;
     }
-    // No hay colisión
+    // No hay colisiï¿½n
     return false;
 }
 void Character::update()
 {
     vy += ay; // Actualizar velocidad vertical
-    y += vy;  // Actualizar posición vertical
+    y += vy;  // Actualizar posiciï¿½n vertical
     ay = GRAVITY; // Aplicar gravedad constante
 
-    // Verificar límite superior de la pantalla
+    // Verificar lï¿½mite superior de la pantalla
     if(y < 0)
     {
         y = 0;
         vy = 0; // Puedes poner vy a cero para detener el movimiento
     }
 
-    // Verificar límite inferior de la pantalla
+    // Verificar lï¿½mite inferior de la pantalla
     if(y + height > VY)
     {
         y = VY - height;
@@ -504,7 +504,7 @@ bool Character::get_bool(int _value)
     case 3:
         return state.attack_3;
     default:
-        return false;  // Asegúrate de devolver un valor por defecto si no se cumplen los casos anteriores
+        return false;  // Asegï¿½rate de devolver un valor por defecto si no se cumplen los casos anteriores
     }
 }
 
@@ -513,14 +513,3 @@ Character::~Character()
 {
 
 }
-    /*
-    if (dim) {
-        for (int i = 0; i < height; ++i) {
-            delete[] dim[i];
-        }
-        delete[] dim;
-        dim = nullptr; // Asegúrate de que no vuelva a ser liberado
-    }
-
-}
-*/
