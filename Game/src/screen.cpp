@@ -42,8 +42,13 @@ void update_screen(BITMAP* buffer)
     }
 
     blit(buffer, screen, 0, 0, 0, 0, SCREEN_W, SCREEN_H);
-    vsync(); // Sincronizaciï¿½n de pantalla
-
+    vsync(); // Sincronización de pantalla
+/*
+    // Mostrar en pantalla
+    blit(buffer, screen, 0, 0, 0, 0, VX, VY);
+    vsync(); // Sincronización de pantalla
+    blit(buffer, screen, 0, 0, 0, 0, VX, VY);
+    */
 }
 
 void ShowMap()

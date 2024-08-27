@@ -1,5 +1,6 @@
 #ifndef START_H_INCLUDED
 #define START_H_INCLUDED
+
 #include <unistd.h>
 #include <iostream>
 #include <allegro.h>
@@ -7,8 +8,15 @@
 #include <cstdlib>
 #include <cmath>
 #include <ctime>
+
 #define VX 1440
 #define VY 900
+
+#define FPS 14
+#define FRAME_TIME 1000 / FPS
+
+#define rows 10
+#define cols 6
 
 extern BITMAP *buffer;
 extern BITMAP *moon;
@@ -17,14 +25,6 @@ extern BITMAP *sea;
 extern BITMAP *cloud;
 extern BITMAP *title;
 extern BITMAP *press;
-
-const float GRAVITY = 10;
-const int FPS = 18;
-const int FRAME_TIME = 1000 / FPS;
-const int rows = 10;
-const int cols = 6;
-
-
 
 void start_program();
 int** create_matrix();
