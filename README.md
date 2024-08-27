@@ -9,11 +9,14 @@ Welcome to Samurai Game V1.0, a 2D game developed with Allegro in C++. In this g
 
 - **2D Graphics:** Uses the Allegro library for graphics and animations.
 - **Controls:** Control the samurai using keyboard inputs.
+  
+> [!NOTE]
+> The contents of the `bin` folder at the moment only contain an `.exe` executable of the game so you can test it.
 
-## System Requirements
+## Recommendations for development
 
 - **Operating System:** Windows, macOS, or Linux
-- **Libraries:** Allegro 4
+- **Libraries:** Allegro 4.2
 - **Development Environment:** Code::Blocks 17.12 (recommended)
 
 ## Development Status
@@ -27,9 +30,9 @@ Currently in development:
 
 ## Notes:
 
-All .bmp images used in the program are in the `resources` folder. In the way the program is set up, you can simply change the matrix to use any .bmp image you want for the program. The matrix used has this format:
+All .bmp images used in the program are located in the `resources` folder. With the current setup, you can easily modify the matrix to use any .bmp image you prefer for your characters in the program. The matrix follows this format:
 
-The first three values ​​in each row are the right orientation, from where the images start to where they end and what row number they are in within the image. the other three values ​​are the same but for the reverse orientation
+The first two values ​​are the column-wise arrangement of images from left to right, and the third value is the row in which the image is located. The other three values ​​are the same but for left-facing images.
 
 {0, 5, 10, 16, 21, 0}, *idle*
 
