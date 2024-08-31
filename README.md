@@ -15,7 +15,7 @@ Welcome to Samurai Game V1.0, a 2D game developed with Allegro in C++. In this g
 
 ## Recommendations for development
 
-- **Operating System:** Windows, macOS, or Linux
+- **Operating System:** Windows
 - **Libraries:** Allegro 4.2
 - **Development Environment:** Code::Blocks 17.12 (recommended)
 
