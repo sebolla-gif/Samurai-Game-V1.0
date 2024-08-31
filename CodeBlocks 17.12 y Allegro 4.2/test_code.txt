@@ -1,0 +1,34 @@
+#include <allegro.h>
+
+
+int main ()
+{
+    /* *** Con estas lineas de codigo preparamos el entorno para graficos y sonidos *** */
+    allegro_init();
+    install_keyboard();
+    set_color_depth(32);
+    set_gfx_mode(GFX_AUTODETECT_WINDOWED, 320, 320, 0, 0);
+        if (install_sound(DIGI_AUTODETECT, MIDI_AUTODETECT, NULL) != 0) {
+       allegro_message("Error: inicializando sistema de sonido\n%s\n", allegro_error);
+       return 1;
+    }
+    set_volume(70, 70);
+    /* ******************************************************************************** */
+
+
+    BITMAP *buffer = create_bitmap(320,320);
+    clear_to_color(buffer, 0x33FF5B);
+
+    textout_centre_ex(buffer, font, "Mi Primer Ventana", 160, 25, 0xFFFFFF, 0x33FF5B);
+    blit(buffer, screen, 0, 0, 0, 0, 640, 480);
+    readkey();
+
+    destroy_bitmap(buffer);
+
+    return 0;
+}
+END_OF_MAIN ()
+
+
+
+
