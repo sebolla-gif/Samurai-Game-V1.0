@@ -1,5 +1,6 @@
 // ComponentList.cpp
 #include "ComponentList.h"
+#include "start.h"
 
 ComponentList::ComponentList() : head(nullptr), tail(nullptr) {}
 
@@ -27,8 +28,12 @@ void ComponentList::updateComponents()
     Node* current = head;
     while (current != nullptr)
     {
-        current->component->update();
-        current = current->next;
+            if (current->component) {
+                current->component->update(); // Verifica que el componente no sea nulo
+            } else {
+                allegro_message("Error: Component is null!");
+            }
+            current = current->next;
     }
 }
 void ComponentList::removeComponent(Component* component)

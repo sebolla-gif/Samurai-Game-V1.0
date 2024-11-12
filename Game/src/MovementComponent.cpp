@@ -82,7 +82,7 @@ void MovementComponent::run()
                 character->pos = row[0];
             character->animation(character->pos,row[2]);
             character->pos++;
-            character->x += (character->speed+40);
+            character->x += (character->speed * 2);
         }
         if(character->state.walk && !character->state.right)
         {
@@ -91,7 +91,7 @@ void MovementComponent::run()
                 character->pos = row[4];
             character->animation(character->pos,row[5]);
             character->pos--;
-            character->x -=(character->speed+40);
+            character->x -=(character->speed * 2);
         }
     }
     return;

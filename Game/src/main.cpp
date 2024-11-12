@@ -11,10 +11,9 @@
  */
 
 #include "start.h"
-#include "map.h"
-#include "characters.h"
-#include "shot.h"
 #include "screen.h"
+#include "samurai.h"
+#include "Factory.h"
 
 // Programa principal del juego
 int main(void)
@@ -26,7 +25,9 @@ int main(void)
     initialize_matrix(matrix_player_1);
 
     // Crea el personaje del jugador
-    Character player_1("player1.bmp", matrix_player_1, 0, VY - 128, 128, 128, 10, 10);
+    Player* player_1 = Factory::crear(Type::Samurai, matrix_player_1);
+
+    Player* enemy_1 = Factory::crear(Type::Samurai, matrix_player_1);
 
     // Carga recursos y muestra el menú
     load_resources();
@@ -42,8 +43,20 @@ int main(void)
 
         // Muestra el mapa y actualiza la lógica del jugador
         ShowMap();
-        player_1.play();
-        player_1.update(GRAVITY);
+        player_1->play();
+        player_1->update(GRAVITY);
+
+        //int numrand = ;
+        enemy_1->attack(player_1->getX(),player_1->getY());
+        enemy_1->update(GRAVITY);
+
+        if(player_1->checkCollision(enemy_1) && enemy_1->state.isAttack()){
+            player_1->damage -= 1;
+        }
+        if(player_1->damage < 0){
+            break;
+        }
+        std::cout << "Damege: " << player_1->damage << std::endl;
 
         // Actualiza la pantalla
         update_screen(buffer);
@@ -56,12 +69,12 @@ int main(void)
 
     // Liberar recursos
     free_matrix(matrix_player_1);
-    destroy_bitmap(player_1.player);
+    destroy_bitmap(player_1->character);
     destroy_bitmap(buffer);
-    player_1.components.clear();
+    player_1->components.clear();
     destroy_all_maps();
     allegro_exit();
-    player_1.~Character();
+    player_1->~Character();
     return 0;
 }
 

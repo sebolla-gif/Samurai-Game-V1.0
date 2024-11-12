@@ -42,7 +42,7 @@ int** create_matrix()
 
 void initialize_matrix(int** matrix)
 {
-    int temp[10][6] =
+    int temp[rows][cols] =
     {
         {0, 5, 10, 16, 21, 0}, //idle
         {0, 8, 11, 13, 21, 1}, //walk

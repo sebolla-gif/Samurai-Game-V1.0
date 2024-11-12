@@ -1,11 +1,8 @@
 #ifndef START_H_INCLUDED
 #define START_H_INCLUDED
 
-#include <unistd.h>
 #include <iostream>
 #include <allegro.h>
-#include <vector>
-#include <cstdlib>
 #include <cmath>
 #include <ctime>
 
