@@ -64,7 +64,7 @@ Se agradecen los comentarios y contribuciones:
 
 ## Hoja de ruta
 
-Casi toda la atención del programa está centrada en mejorar la lógica y en separar mejor las partes del personaje de la lógica del juego. También falta la parte del menú y se deben generar los diferentes modos de juego. El proyecto aún tiene un largo camino por recorrer, pero habrá más novedades en los próximos meses.
+Casi toda la atención del programa está centrada en mejorar la lógica y en separar mejor las partes del personaje de la lógica del juego. También falta terminar la parte del menú y se deben generar los diferentes modos de juego. El proyecto aún tiene un largo camino por recorrer, pero habrá más novedades en los próximos meses.
 
 ## Licencia
 
@@ -138,7 +138,7 @@ Feedback and contributions are appreciated:
 
 ## Roadmap
 
-Almost all the program's attention is focused on improving the logic and better separating the character's parts from the game logic. The menu part is also missing and the different game modes need to be generated. The project still has a long way to go, but there will be more news in the next few months.
+Almost all the program's attention is focused on improving the logic and better separating the character's parts from the game logic. The menu part also needs to be finished and the different game modes need to be generated. The project still has a long way to go, but there will be more news in the next few months.
 
 ## License
 
